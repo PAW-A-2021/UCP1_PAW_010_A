@@ -1,0 +1,58 @@
+﻿@model UCP1_PAW_010_A.Models.Golongan
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Golongan</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Idgolongan" class="control-label">ID Golongan</label>
+                <input asp-for="Idgolongan" class="form-control" />
+                <span asp-validation-for="Idgolongan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Golongan1" class="control-label">Golongan</label>
+                <input asp-for="Golongan1" class="form-control" />
+                <span asp-validation-for="Golongan1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TjKeluarga" class="control-label">Tunjangan Keluarga</label>
+                <input asp-for="TjKeluarga" class="form-control" />
+                <span asp-validation-for="TjKeluarga" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TjKesehatan" class="control-label">Tunjangan Kesehatan</label>
+                <input asp-for="TjKesehatan" class="form-control" />
+                <span asp-validation-for="TjKesehatan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UangLembur" class="control-label">Uang Lembur</label>
+                <input asp-for="UangLembur" class="form-control" />
+                <span asp-validation-for="UangLembur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UangMakan" class="control-label">Uang Makan</label>
+                <input asp-for="UangMakan" class="form-control" />
+                <span asp-validation-for="UangMakan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

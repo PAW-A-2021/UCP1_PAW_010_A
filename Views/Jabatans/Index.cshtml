@@ -1,0 +1,48 @@
+﻿@model IEnumerable<UCP1_PAW_010_A.Models.Jabatan>
+
+@{
+    ViewData["Title"] = "Jabatan";
+}
+
+<h1>Jabatan</h1>
+
+<p>
+    <a asp-action="Create"><i class="fas fa-plus-square fa-2x"></i></a>
+</p>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Jabatan")
+            </th>
+            <th>
+                @Html.DisplayName("Gaji Pokok")
+            </th>
+            <th>
+                @Html.DisplayName("Tunjangan Jabatan")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Jabatan1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gajipokok)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TjJabatan)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Idjabatan"><i class="fas fa-pen-square fa-lg"></i></a>  
+                    <a asp-action="Details" asp-route-id="@item.Idjabatan"><i class="fas fa-list-alt fa-lg"></i></a>  
+                    <a asp-action="Delete" asp-route-id="@item.Idjabatan"><i class="fas fa-minus-square fa-lg"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

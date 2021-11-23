@@ -1,0 +1,72 @@
+﻿@model UCP1_PAW_010_A.Models.Gaji
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Gaji</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayName("No Slip")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NoSlip)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Nama Karyawan")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdkaryawanNavigation.Nama)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tanggal)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tanggal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Gaji Bulan")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GajiBulan)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lembur)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lembur)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Masuk)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Masuk)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Sub Total")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SubTotal)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayName("Pph (%)")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Pph)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Total)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Total)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Idgaji">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

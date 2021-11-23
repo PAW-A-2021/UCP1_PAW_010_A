@@ -1,0 +1,41 @@
+﻿@model IEnumerable<UCP1_PAW_010_A.Models.Admin>
+
+@{
+    ViewData["Title"] = "Admin";
+}
+
+<h1>Admin</h1>
+
+<p>
+    <a asp-action="Create"><i class="fas fa-plus-square fa-2x"></i></a>
+</p>
+<table class="table table-hover table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Password)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-pen-square fa-lg"></i></a>  
+                <a asp-action="Details" asp-route-id="@item.Id"><i class="fas fa-list-alt fa-lg"></i></a>  
+                <a asp-action="Delete" asp-route-id="@item.Id"><i class="fas fa-minus-square fa-lg"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

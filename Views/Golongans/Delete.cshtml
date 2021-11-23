@@ -1,0 +1,51 @@
+﻿@model UCP1_PAW_010_A.Models.Golongan
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Yakin untuk menghapus?</h3>
+<div>
+    <h4>Golongan</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Golongan")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Golongan1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Tunjangan Keluarga")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TjKeluarga)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Tunjangan Kesehatan")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TjKesehatan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Uang Lembur")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UangLembur)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Uang Makan")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.UangMakan)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Idgolongan" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

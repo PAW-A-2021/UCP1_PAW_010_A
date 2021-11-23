@@ -1,0 +1,63 @@
+﻿@model UCP1_PAW_010_A.Models.Karyawan
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Yakin untuk menghapus?</h3>
+<div>
+    <h4>Karyawan</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayName("NIP")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nip)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nama)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nama)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Jenis Kelamin")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JenisKelamin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Alamat)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Alamat)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Golongan")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdgolonganNavigation.Idgolongan)
+        </dd class>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Jabatan")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdjabatanNavigation.Jabatan1)
+        </dd class>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Idkaryawan" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
